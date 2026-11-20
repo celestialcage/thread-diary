@@ -1,0 +1,28 @@
+[project]
+name = "thread-diary-fastapi"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Leafy", email = "newlemonseed@gmail.com" }
+]
+requires-python = ">=3.15"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "fastapi[standard]>=0.163.1",
+    "httpx>=0.28.1",
+    "sqlmodel>=0.0.50",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.8,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.ruff.lint]
+# FastAPI의 Depends 패턴 때문에 B008(함수 기본값 내 함수 호출) 경고는 무시합니다.
+ignore = ["B008"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.5",
+]

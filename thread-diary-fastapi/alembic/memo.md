@@ -1,0 +1,1 @@
+DB 마이그레이션 도구 (스프링 Flyway/Liquibase 같은 존재)
